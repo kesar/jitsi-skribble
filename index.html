@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body style="text-align: center">
+<iframe id="camera" allow="camera; microphone" width="1024" height="250"></iframe>
+<br>
+<iframe id="skribbl" width="1024" height="500"></iframe>
+<script>
+    var urlParams = new URLSearchParams(window.location.search)
+    var jitsi = urlParams.get('jitsi')
+    alert(jitsi)
+    var skribbl = urlParams.get('skribbl')
+    iframe1 = document.getElementById('camera')
+    iframe2 = document.getElementById('skribbl')
+
+    iframe1.src = 'https://meet.jit.si/' + jitsi
+    iframe2.src = 'https://skribbl.io?' + skribbl
+</script>
+</body>
+</html>
